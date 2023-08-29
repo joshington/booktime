@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Login</h2>
+<p>Please fill the form below.</p>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="form-group">
+    {{ form.email.label_tag }}
+    <input
+      type="email"
